@@ -8,10 +8,9 @@ namespace Tyuiu.SobjaninMI.Sprint5.Task0.V29.Test
         [TestMethod]
         public void ChekedSaveToFileTextData()
         {
-            string path = @"C:\APP\VSCOM\source\repos\Tyuiu.SobjaninMI.Sprint5\Tyuiu.SobjaninMI.Sprint5.Task0.V29\bin\Debug\net8.0\OutPutFileTask0.txt";
-            FileInfo fileinfo = new FileInfo(path);
-            bool fileExists = fileinfo.Exists;
-            Assert.AreEqual(true, fileExists);
+            DataService ds = new DataService();
+            string res = ds.SaveToFileTextData(3);
+            Assert.AreEqual("169,89", res);
         }
     }
 }
